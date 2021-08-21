@@ -65,11 +65,13 @@
                         <h5>Choose your delivery option</h5>
                         <div class="d-flex">
                             <div class="me-1">
-                                <button type="button" class="btn btn-outline-dark">Friday, Aug 25 FREE Prime
+                                <button id="delivery-free" type="button" class="btn btn-outline-dark">Friday, Aug 25
+                                    FREE Prime
                                     Delivery</button>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-outline-dark">Friday, Aug 21 Delivery charge
+                                <button id="delivery-normal" type="button" class="btn btn-outline-dark">Friday, Aug 21
+                                    Delivery charge
                                     $20</button>
                             </div>
                         </div>
@@ -92,7 +94,7 @@
                                     </tr>
                                     <tr>
                                         <th>Delivary Charge</th>
-                                        <th>$0</th>
+                                        <th>$<span id="delivery-cost">0</span></th>
                                     </tr>
                                 </tbody>
                                 <tr>

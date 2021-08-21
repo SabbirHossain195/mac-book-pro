@@ -1,40 +1,32 @@
+function calculateExtraCost(product, amount) {
+    const productCost = document.getElementById(product + '-cost');
+    productCost.innerText = amount;
+};
+
+
 // memory event listener added
 document.getElementById('memory-decrease').addEventListener('click', function () {
-    const memoryPrice = document.getElementById('memory-cost');
-    const memoryCost = parseInt(memoryPrice.innerText);
-    if (memoryCost > 0) {
-        const totalMemoryCost = memoryCost - 180;
-        memoryPrice.innerText = totalMemoryCost;
-    }
+    calculateExtraCost('memory', 0);
 });
 document.getElementById('memory-increase').addEventListener('click', function () {
-    const memoryPrice = document.getElementById('memory-cost');
-    const memoryCost = parseInt(memoryPrice.innerText);
-    if (memoryCost == 0) {
-        const totalMemoryCost = memoryCost + 180;
-        memoryPrice.innerText = totalMemoryCost;
-    }
+    calculateExtraCost('memory', 180);
 });
 
 // storage event listener added
 document.getElementById('storage-base').addEventListener('click', function () {
-    const storagePrice = document.getElementById('storage-cost');
-    const storageCost = parseInt(storagePrice.innerText);
-    if (storageCost > 0) {
-        storagePrice.innerText = 0;
-    }
+    calculateExtraCost('storage', 0);
 });
 document.getElementById('storage-512GB').addEventListener('click', function () {
-    const storagePrice = document.getElementById('storage-cost');
-    const storageCost = parseInt(storagePrice.innerText);
-    if (storageCost == 0 || storageCost == 180) {
-        storagePrice.innerText = 100;
-    }
+    calculateExtraCost('storage', 100);
 });
 document.getElementById('storage-1TB').addEventListener('click', function () {
-    const storagePrice = document.getElementById('storage-cost');
-    const storageCost = parseInt(storagePrice.innerText);
-    if (storageCost == 0 || storageCost == 100) {
-        storagePrice.innerText = 180;
-    }
+    calculateExtraCost('storage', 180);
 });
+
+// delivery event listener added
+document.getElementById('delivery-free').addEventListener('click', function () {
+    calculateExtraCost('delivery', 0);
+})
+document.getElementById('delivery-normal').addEventListener('click', function () {
+    calculateExtraCost('delivery', 20);
+})
