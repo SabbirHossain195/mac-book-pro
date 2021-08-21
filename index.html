@@ -35,10 +35,12 @@
                         <h5>Memory</h5>
                         <div class="d-flex">
                             <div class="me-2">
-                                <button type="button" class="btn btn-outline-dark">8GB unified memory</button>
+                                <button id="memory-decrease" type="button" class="btn btn-outline-dark">8GB unified
+                                    memory</button>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-outline-dark">16GB unified memory</button>
+                                <button id="memory-increase" type="button" class="btn btn-outline-dark">16GB unified
+                                    memory</button>
                             </div>
                         </div>
                     </div>
@@ -46,13 +48,16 @@
                         <h5>Storage</h5>
                         <div class="d-flex">
                             <div>
-                                <button type="button" class="btn btn-outline-dark">256GB SSD storage</button>
+                                <button id="storage-base" type="button" class="btn btn-outline-dark">256GB SSD
+                                    storage</button>
                             </div>
                             <div class="mx-2">
-                                <button type="button" class="btn btn-outline-dark">512GB SSD storage</button>
+                                <button id="storage-512GB" type="button" class="btn btn-outline-dark">512GB SSD
+                                    storage</button>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-outline-dark">1TB SSD storage</button>
+                                <button id="storage-1TB" type="button" class="btn btn-outline-dark">1TB SSD
+                                    storage</button>
                             </div>
                         </div>
                     </div>
@@ -79,11 +84,11 @@
                                     </tr>
                                     <tr>
                                         <th>Extra Memory Cost</th>
-                                        <th>$0</th>
+                                        <th>$<span id="memory-cost">0</span></th>
                                     </tr>
                                     <tr>
                                         <th>Extra Storage Cost</th>
-                                        <th>$0</th>
+                                        <th>$<span id="storage-cost">0</span></th>
                                     </tr>
                                     <tr>
                                         <th>Delivary Charge</th>
@@ -117,6 +122,9 @@
         <!-- second section close -->
     </main>
     <!-- main part close -->
+
+    <!-- javascript added -->
+    <script src="app.js"></script>
 </body>
 
 </html>
