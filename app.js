@@ -1,7 +1,22 @@
 function calculateExtraCost(product, amount) {
-    const productCost = document.getElementById(product + '-cost');
-    productCost.innerText = amount;
+    const productPrice = document.getElementById(product + '-cost');
+    productPrice.innerText = amount;
+    calculateTotal();
 };
+
+function calculateTotal() {
+    const totalCost = document.getElementById('total-cost');
+    const basePrice = document.getElementById('base-price');
+    const baseCost = parseInt(basePrice.innerText);
+    const memoryPrice = document.getElementById('memory-cost');
+    const memoryCost = parseInt(memoryPrice.innerText);
+    const storagePrice = document.getElementById('storage-cost');
+    const storageCost = parseInt(storagePrice.innerText);
+    const deliveryCharge = document.getElementById('delivery-cost');
+    const deliveryCost = parseInt(deliveryCharge.innerText);
+    const productsTotalCost = baseCost + memoryCost + storageCost + deliveryCost;
+    totalCost.innerText = productsTotalCost;
+}
 
 
 // memory event listener added
